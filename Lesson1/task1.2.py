@@ -14,6 +14,7 @@ resize(self, new_width, new_height) — a method that changes the width and heig
 Create an object of the Rectangle class and test all the methods.
 """
 
+
 class Rectangle:
     def __init__(self, width: int|float, height: int|float):
         if width <= 0 or height <= 0:
