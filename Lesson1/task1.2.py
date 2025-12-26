@@ -15,22 +15,26 @@ Create an object of the Rectangle class and test all the methods.
 """
 
 class Rectangle:
-    def __init__(self, width, height):
+    def __init__(self, width: int|float, height: int|float):
         if width <= 0 or height <= 0:
             raise ValueError("Rectangle side cannot be equal to or less than 0")
         self.width = width
         self.height = height
 
-    def area (self):
+    def area (self) -> int|float:
+        """Returns the area of a rectangle by using its width and height"""
         return self.width * self.height
 
-    def perimeter(self):
+    def perimeter(self) -> int|float:
+        """Returns the perimeter of a rectangle by using its width and height"""
         return 2 * (self.width + self.height)
 
-    def is_square(self):
+    def is_square(self) -> int|float:
+        """Checks whether rectangle is square or not"""
         return self.width == self.height
 
-    def resize(self, new_width, new_height):
+    def resize(self, new_width: int|float, new_height: int|float):
+        """Sets new width and height values"""
         if new_width <= 0 or new_height <= 0:
             raise ValueError("Rectangle side cannot be equal to or less than 0")
         self.width = new_width
