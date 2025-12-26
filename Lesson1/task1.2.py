@@ -41,6 +41,7 @@ class Rectangle:
         self.width = new_width
         self.height = new_height
 
+
 try:
     Rectangle(0, 2)
 except ValueError as e:

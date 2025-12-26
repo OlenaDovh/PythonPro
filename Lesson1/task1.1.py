@@ -6,7 +6,6 @@ Use this function in a program that asks the user for a radius and prints out th
 """
 import math
 
-
 circle_radius = int(input("Enter radius of the circle\n"))
 
 
