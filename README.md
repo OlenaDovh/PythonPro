@@ -1,2 +1,0 @@
-# PythonPro
-PythonPro
