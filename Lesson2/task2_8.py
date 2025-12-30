@@ -1,4 +1,4 @@
-def create_user_settings():
+def create_user_settings() -> tuple:
     """Creates new settings"""
     setting = {
         "theme": "white",
@@ -15,7 +15,7 @@ def create_user_settings():
             print('Unknown setting')
         return setting
 
-    def get_setting_by_key(key: str) -> str:
+    def get_setting_by_key(key: str) -> str | None:
         """Gives value of exact setting inputted as a key"""
         print(setting.get(key))
         return setting.get(key)

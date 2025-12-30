@@ -1,17 +1,18 @@
 import builtins
 
 
-def my_sum():
+def my_sum() -> None:
     """ Overrides built-in function sum()."""
 
-    def sums(nums):
+    def sums(nums: int | float | list[int | float]) -> str:
+        print(nums)
         return "This is my custom sum function!"
 
     global sum
     sum = sums
 
 
-numbers = [1, 15, 23, 47, 3, 89, 13, 1, 16]
+numbers = [1, 15, 23, 47, 3, 89, 13, 1, 16.0]
 
 summa = sum
 

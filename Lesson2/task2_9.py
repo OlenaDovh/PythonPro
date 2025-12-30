@@ -1,8 +1,11 @@
-def memoize(func):
+from typing import Callable, Any
+
+
+def memoize(func: Callable) -> Callable:
     """Saves the result of the function operations"""
     operation_result = {}
 
-    def wrapper(*args):
+    def wrapper(*args: Any) -> Any:
         if args not in operation_result:
             operation_result[args] = func(*args)
         return operation_result[args]
@@ -11,7 +14,7 @@ def memoize(func):
 
 
 @memoize
-def fibonacci(num: int | float) -> int:
+def fibonacci(num: int) -> int:
     """Defines fibonacci numbers"""
     if num in (0, 1):
         return num
@@ -19,7 +22,7 @@ def fibonacci(num: int | float) -> int:
 
 
 @memoize
-def factorial(number: int | float) -> int:
+def factorial(number: int) -> int:
     """Calculates factorial of a number"""
     if number in (0, 1):
         return 1

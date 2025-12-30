@@ -1,15 +1,15 @@
 events = []
 
 
-def work_with_events():
+def work_with_events() -> tuple:
     """Gets operations with events"""
 
-    def add(new_event: str):
+    def add(new_event: str) -> None:
         """Adds new event in the calendar"""
         events.append(new_event)
         print(f"Event '{new_event}' is added successfully")
 
-    def delete(event: str):
+    def delete(event: str) -> None:
         """Deletes specified event from the calendar"""
         if event in events:
             events.remove(event)

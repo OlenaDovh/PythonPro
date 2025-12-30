@@ -6,7 +6,7 @@ def create_order(price: int | float) -> tuple:
     final_sum = price - (price * discount / 100)
     print(f"Початкова ціна: {price} грн")
 
-    def apply_additional_discount(add_discount):
+    def apply_additional_discount(add_discount: int | float) -> float:
         """Calculates the final sum of the order using additional discount"""
         nonlocal final_sum
         if add_discount == 0:

@@ -1,16 +1,16 @@
 total_expense = 0
 
 
-def calculate_expense():
+def calculate_expense() -> tuple:
     """Adds new expense or gives total expense sum"""
 
-    def add_expense(expense_sum):
+    def add_expense(expense_sum: int | float) -> None:
         """Adds new expense"""
         global total_expense
         total_expense += expense_sum
         print("Added successfully")
 
-    def get_expense():
+    def get_expense() -> int | float:
         """Gives total expense sum"""
         print(f"Your total expense sum is {total_expense}")
         return total_expense

@@ -1,7 +1,10 @@
-def create_calculator(operator):
+from typing import Callable
+
+
+def create_calculator(operator: str) -> Callable:
     """Returns necessary operating function"""
 
-    def calc(a, b):
+    def calc(a: int | float, b: int | float) -> int | float | str:
         operations = {
             '+': lambda x, y: x + y,
             '-': lambda x, y: x - y,

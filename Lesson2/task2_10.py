@@ -1,20 +1,23 @@
-def create_product(name):
+from typing import Callable
+
+
+def create_product(name: str) -> Callable:
     """Creates new product with its name, price and count"""
 
-    def set_product_price(price):
-        def set_count(count):
+    def set_product_price(price: int | float) -> Callable:
+        def set_count(count: int) -> tuple:
             new_product = {
                 'name': name,
                 'price': price,
                 'count': count
             }
 
-            def set_new_price(price_new):
+            def set_new_price(price_new: int | float) -> None:
                 """Changes price of the product"""
                 new_product['price'] = price_new
                 print(f"New price of '{name}' is {new_product['price']}")
 
-            def get_product():
+            def get_product() -> dict:
                 """Gives info of the product (name, price, count)"""
                 return new_product
 

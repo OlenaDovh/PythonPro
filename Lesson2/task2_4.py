@@ -1,12 +1,12 @@
 default_time = 60
 
 
-def training_session(workout_rounds):
+def training_session(workout_rounds: int) -> None:
     """Adjusts training time using default one"""
     time_per_round = default_time
     print("Результат:")
 
-    def adjust_time():
+    def adjust_time() -> int:
         """Changes training time for each period (5min) """
         return time_per_round - 5
 
