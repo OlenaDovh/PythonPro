@@ -16,7 +16,7 @@ while True:
 math_operation = input("Enter arithmetic operation (+, -, *, /): ")
 
 
-def calculator(number_1: int | float, number_2: int | float, math_oper: str) -> float| None:
+def calculator(number_1: int | float, number_2: int | float, math_oper: str) -> float | None:
     """Returns result of math operation with 2 input operands"""
     try:
         if math_oper == "+":
