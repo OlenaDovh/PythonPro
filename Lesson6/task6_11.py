@@ -16,7 +16,5 @@ def get_avg(file_path: str) -> Generator:
                 pass
 
 
-avg = get_avg("Avg.txt")
-
 for avg in get_avg("Avg.txt"):
-    print(avg)
+    print(f'{avg:.2f}')

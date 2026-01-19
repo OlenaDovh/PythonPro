@@ -10,4 +10,3 @@ def calculate_circle_area(radius: int | float) -> float:
     return math.pi * radius ** 2
 
 
-print(calculate_circle_area(circle_radius))
