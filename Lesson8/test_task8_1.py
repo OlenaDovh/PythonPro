@@ -1,8 +1,8 @@
-import unittest
+from unittest import skip, TestCase
 from Lesson8.task8_1 import StringProcessor
 
 
-class StringProcessorTestCases(unittest.TestCase):
+class StringProcessorTestCases(TestCase):
 
     def setUp(self):
         self.sp = StringProcessor()
@@ -19,7 +19,7 @@ class StringProcessorTestCases(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.sp.reverse_string(None)
 
-    @unittest.skip("'empty str' will be fixed soon")
+    @skip("'empty str' will be fixed soon")
     def test_reverse_empty_string(self):
         self.assertEqual(self.sp.reverse_string(""), "")
 
@@ -39,7 +39,7 @@ class StringProcessorTestCases(unittest.TestCase):
     def test_count_zero_vowels(self):
         self.assertFalse(self.sp.count_vowels("МРТ*"))
 
-    @unittest.skip("тут буде помилка з деталізацією")
+    @skip("тут буде помилка з деталізацією")
     def test_count(self):
         self.assertGreater(self.sp.count_vowels("Interesting"), self.sp.count_vowels("Interested"),
                            "Кількість голосних в першому слові менше за друге!")
